@@ -12,6 +12,6 @@ namespace SqlSugarLearnConsole
         public static string SqlServerConn = "Server=.;Database = SqlSugarDemo; uid = sa; pwd = 123456; Encrypt=True;TrustServerCertificate=True";
 
         // DM8 配置（DM 默认端口 5236）
-        public static string DmConn = "Server = localhost;User Id=SYSDBA; PWD=DmSYSDBA2025";
+        public static string DmConn = "Server = localhost;User Id=SQLSUGARDEMO; PWD=Sqlsugardemo123";
     }
 }

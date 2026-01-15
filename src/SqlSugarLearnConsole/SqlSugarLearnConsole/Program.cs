@@ -9,14 +9,15 @@ namespace SqlSugarLearnConsole
         static void Main(string[] args)
         {
             // 选择数据库，true = SqlServer， false = DM 
-            var context = new DbContext(useSqlServer: true);
+            //var context = new DbContext(useSqlServer: true);
+            var context = new DbContext(useSqlServer: false);
             var db = context.Db;
 
             // 建表（只需运行一次，之后可注释）
-            // db.CodeFirst.InitTables(typeof(School), typeof(Student), typeof(Order), typeof(OrderItem));
+            db.CodeFirst.InitTables(typeof(School), typeof(Student), typeof(Orders), typeof(OrderItem));
 
             // 插入测试数据（第一次运行打开，之后可注释或加判断）
-            //new DataSeeder(db).Seed();
+            new DataSeeder(db).Seed();
 
             //执行各种查询示例
             var studentQueries = new StudentQueries(db);

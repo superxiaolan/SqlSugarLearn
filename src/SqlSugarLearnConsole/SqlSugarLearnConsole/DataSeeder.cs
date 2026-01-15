@@ -42,7 +42,7 @@ namespace SqlSugarLearnConsole
             Console.WriteLine($"插入 {students.Count} 名学生");
 
             // 插入订单和订单项
-            var order = new Order { CustomerId = 1001, TotalPrice = 74751m };
+            var order = new Orders { CustomerId = 1001, TotalPrice = 74751m };
             _db.Insertable(order).ExecuteCommand();
 
             var items = new[]

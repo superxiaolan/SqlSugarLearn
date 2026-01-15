@@ -7,14 +7,13 @@ using SqlSugar;
 
 namespace SqlSugarLearnConsole.Models
 {
-    [SugarTable("Order")]
-    public class Order
+    [SugarTable("Orders")]
+    public class Orders
     {
         [SugarColumn(IsPrimaryKey = true)]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         public int CustomerId { get; set; }
-
         public DateTime CreateTime { get; set; } = DateTime.Now;
 
         public decimal TotalPrice { get; set; }
